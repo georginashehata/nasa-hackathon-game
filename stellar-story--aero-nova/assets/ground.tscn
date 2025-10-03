@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://djwd161qbq5wr"]
+
+[ext_resource type="Script" uid="uid://b72j6ckb0cj21" path="res://assets/ground.gd" id="1_6diom"]
+[ext_resource type="Texture2D" uid="uid://colwixrsltp8d" path="res://assets/meteor3.png" id="2_d3gin"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b62as"]
+size = Vector2(1442.25, 154)
+
+[node name="Ground" type="Area2D"]
+position = Vector2(757, 1425)
+script = ExtResource("1_6diom")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(549.24994, -147)
+scale = Vector2(1.1280154, 0.32838985)
+texture = ExtResource("2_d3gin")
+offset = Vector2(0, 1152)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(547.875, 236)
+shape = SubResource("RectangleShape2D_b62as")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

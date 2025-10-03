@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvk0376aemvxt"]
+
+[ext_resource type="Texture2D" uid="uid://cjpc6bd2xbemr" path="res://scenes/astronaut/16403522-9b31-451f-940a-23bb06dd820a.jpg" id="1_e5fh0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nrknr"]
+texture = ExtResource("1_e5fh0")
+
+[node name="astronaut" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1151.0
+offset_bottom = 781.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_nrknr")

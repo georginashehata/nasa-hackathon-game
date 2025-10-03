@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b03j6y1kcinxn"]
+
+[ext_resource type="Texture2D" uid="uid://cgmlmbqo6l1ma" path="res://scenes/meteor/meteor.png" id="1_2r85p"]
+[ext_resource type="Script" uid="uid://ceyx4f0kdg5q" path="res://scenes/meteor/meteor_game.gd" id="1_v6lbp"]
+[ext_resource type="PackedScene" uid="uid://dpbwbknliyg4c" path="res://scenes/meteor/bird.tscn" id="2_5jmab"]
+[ext_resource type="PackedScene" uid="uid://djwd161qbq5wr" path="res://assets/ground.tscn" id="3_v6lbp"]
+
+[node name="meteor_game" type="Node2D"]
+script = ExtResource("1_v6lbp")
+
+[node name="Panel" type="TextureRect" parent="."]
+offset_left = -5.0
+offset_top = -2.0
+offset_right = 1328.0
+offset_bottom = 748.0
+texture = ExtResource("1_2r85p")
+flip_v = true
+
+[node name="Ground" parent="Panel" instance=ExtResource("3_v6lbp")]
+visible = false
+position = Vector2(177, 434)
+
+[node name="Bird" parent="Panel" instance=ExtResource("2_5jmab")]
+visibility_layer = 2
+z_index = 10
+position = Vector2(473, -156)
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="MeteorTimer" type="Timer" parent="."]
+wait_time = 1.2

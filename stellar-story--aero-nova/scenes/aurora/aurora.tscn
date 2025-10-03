@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dicmkvgfuatha"]
+
+[ext_resource type="Texture2D" uid="uid://dh217kf6lh7e3" path="res://scenes/aurora/aur.jpg" id="1_ntjdw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sxsxf"]
+texture = ExtResource("1_ntjdw")
+
+[node name="aurora" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1154.0
+offset_bottom = 644.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_sxsxf")

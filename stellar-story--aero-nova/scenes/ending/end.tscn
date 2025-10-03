@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://7nv1qptc8sts"]
+
+[ext_resource type="Texture2D" uid="uid://bonp46hkxbb4l" path="res://scenes/intro/backgroundColorGrass.png" id="1_wnjm0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f26p6"]
+texture = ExtResource("1_wnjm0")
+
+[node name="end" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1153.0
+offset_bottom = 654.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_f26p6")

@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpbwbknliyg4c"]
+
+[ext_resource type="Script" uid="uid://b2qigeyr58bod" path="res://scenes/meteor/bird.gd" id="1_anuhc"]
+[ext_resource type="Texture2D" uid="uid://drb2yulssqdvy" path="res://assets/1.png" id="2_xhpwi"]
+[ext_resource type="Texture2D" uid="uid://b0njs0rejaka4" path="res://assets/farmer/WhatsApp_Image_2025-10-03_at_5.27.19_PM-removebg-preview.png" id="3_20ykd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pel0l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xhpwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_20ykd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_20ykd")
+}],
+"loop": true,
+"name": &"flying",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8qxb4"]
+radius = 87.0
+height = 200.0
+
+[node name="Bird" type="CharacterBody2D" groups=["player"]]
+collision_mask = 2
+motion_mode = 1
+script = ExtResource("1_anuhc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(100, 300)
+scale = Vector2(0.49, 0.50400007)
+sprite_frames = SubResource("SpriteFrames_pel0l")
+animation = &"flying"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(111, 293)
+shape = SubResource("CapsuleShape2D_8qxb4")

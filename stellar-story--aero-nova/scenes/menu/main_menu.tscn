@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://ohddcrlpdc1w"]
+
+[ext_resource type="Script" uid="uid://d2s0ybq2yhjrd" path="res://scenes/menu/main_menu.gd" id="1_3rkf3"]
+[ext_resource type="Texture2D" uid="uid://8klgors8l0ql" path="res://scenes/menu/space.jpg" id="1_nl8w3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3rkf3"]
+texture = ExtResource("1_nl8w3")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.1584723, 0.15847233, 0.15847224, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3rkf3")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3rkf3")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -268.0
+offset_top = 141.0
+offset_right = 260.0
+offset_bottom = 252.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "Penguin Explorer"
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -11.0
+offset_right = 135.0
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+text = "Start"
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.0
+offset_top = 90.0
+offset_right = 134.0
+offset_bottom = 172.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+text = "Exit"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]

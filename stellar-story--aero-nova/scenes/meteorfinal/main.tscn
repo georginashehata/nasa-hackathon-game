@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpnd152tx0iuw"]
+
+[ext_resource type="Texture2D" uid="uid://cgmlmbqo6l1ma" path="res://scenes/meteor/meteor.png" id="1_1m1sp"]
+
+[node name="Main" type="Node"]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(574.99664, 326.49814)
+scale = Vector2(0.8627206, 0.87067175)
+texture = ExtResource("1_1m1sp")

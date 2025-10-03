@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf6lldl58kbiv"]
+
+[ext_resource type="Texture2D" uid="uid://du5dxn1r2x0pw" path="res://scenes/pilot/pilot.jpg" id="1_s054c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2257b"]
+texture = ExtResource("1_s054c")
+
+[node name="pilot" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1150.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2257b")

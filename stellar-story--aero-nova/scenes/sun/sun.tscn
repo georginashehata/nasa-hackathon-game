@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy8pob682c8jl"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3sdq5"]
+load_path = "res://.godot/imported/sun1.jpg-94da9d94fc820ad8336b3f4bcdd58de0.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8csjo"]
+texture = SubResource("CompressedTexture2D_3sdq5")
+
+[node name="sun" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_top = -134.0
+offset_right = 1196.0
+offset_bottom = 652.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_8csjo")
